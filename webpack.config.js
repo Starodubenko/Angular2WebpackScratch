@@ -10,8 +10,7 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 const ExtractTextPlugin = require('extract-text-webpack-plugin');
 
 let getBuildPath = function () {
-    var mode = BUILD_MODE.split(':')[1];
-    switch (mode) {
+    switch (BUILD_MODE.split(':')[1]) {
         case DEV_MODE:
             return __dirname + '/build/dev';
             break;
