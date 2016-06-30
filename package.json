@@ -7,8 +7,8 @@
     "postinstall": "typings install",
     "build:dev": "webpack --progress",
     "build:prod": "webpack -p --progress",
-    "serve:dev": "webpack --progress | webpack-dev-server --inline --content-base build/dev",
-    "serve:prod": "webpack -p --progress | webpack-dev-server --inline --content-base build/prod"
+    "serve:dev": "webpack --progress | webpack-dev-server  --content-base build/dev",
+    "serve:prod": "webpack -p --progress | webpack-dev-server  --content-base build/prod"
   },
   "keywords": [],
   "author": "",

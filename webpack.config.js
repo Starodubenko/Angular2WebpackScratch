@@ -1,15 +1,17 @@
 'use strict';
 
-const DEV_MODE = 'build:dev';
-const PROD_MODE = 'build:prod';
+const DEV_MODE = 'dev';
+const PROD_MODE = 'prod';
 const BUILD_MODE = process.env.npm_lifecycle_event || DEV_MODE;
 const webpack = require('webpack');
 const path = require('path');
+const rimraf = require('rimraf');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const ExtractTextPlugin = require('extract-text-webpack-plugin');
 
 let getBuildPath = function () {
-    switch (BUILD_MODE) {
+    var mode = BUILD_MODE.split(':')[1];
+    switch (mode) {
         case DEV_MODE:
             return __dirname + '/build/dev';
             break;
@@ -31,7 +33,9 @@ module.exports = {
     output: { //directory of build files.
         path: getBuildPath(),
         filename: '[name].js',
-        library: '[name]'
+        library: '[name]',
+        publicPath: '/assets/',
+        chunkFilename: '[name]'
     },
 
     watch: BUILD_MODE == DEV_MODE, //rebuild if files was changed
@@ -50,7 +54,7 @@ module.exports = {
             template: './index.html'
         }),
         new ExtractTextPlugin('[name].css', {allChunks: true}),
-        new webpack.optimize.CommonsChunkPlugin('common', 'common.js')
+        new webpack.optimize.CommonsChunkPlugin({name: 'common'})
     ],
 
     resolve: { //directory where libraries will be found.
