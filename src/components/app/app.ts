@@ -1,27 +1,19 @@
 import './app.scss'
-import {Component} from 'angular2/core';
-import {RouteConfig, RouterOutlet, RouterLink} from 'angular2/router';
-import {Login} from '../login/login';
-let login = new Login('L', 'ogi', 'n');
-
+import {Component} from '@angular/core';
+import {ROUTER_DIRECTIVES} from "@angular/router";
 
 @Component({
     selector: 'app',
-    template: `<div><h1>This is Angular 2 Typescript Webpack App !!! {{fullName}}</h1></div>`,
-    directives: [RouterOutlet, RouterLink]
+    template: `<div><h1>This is Angular 2 Typescript Webpack App !!!</h1>
+                    <a [routerLink]="['/login']">Login</a>
+                    <router-outlet></router-outlet>
+                </div>`,
+    directives: [ROUTER_DIRECTIVES]
 })
 export class App {
     fullName:string;
-
-    constructor(public firstName, public middleInitial, public lastName) {
-        this.fullName = firstName + " " + middleInitial + " " + lastName;
-    }
 
     getFullName() {
         return this.fullName;
     }
 }
-
-let app = new App('A', 'p', 'p');
-
-// alert(app.getFullName());

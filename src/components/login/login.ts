@@ -1,6 +1,5 @@
-import {Component} from 'angular2/core';
-import {RouteConfig, RouterOutlet, RouterLink} from 'angular2/router';
-
+import './login.scss'
+import {Component} from '@angular/core';
 
 @Component({
     selector: 'login',
@@ -10,13 +9,11 @@ import {RouteConfig, RouterOutlet, RouterLink} from 'angular2/router';
             <div class="exhibition-wall"></div>
             <aside class="right-bar"></aside>
         </div>`,
-    // directives: [RouterOutlet, RouterLink]
+    directives: []
 })
 export class Login {
     fullName: string;
-    constructor(public firstName, public middleInitial, public lastName) {
-        this.fullName = firstName + " " + middleInitial + " " + lastName;
-    }
+
     getFullName(){
         return this.fullName;
     }
