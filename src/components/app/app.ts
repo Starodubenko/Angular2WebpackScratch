@@ -24,4 +24,4 @@ export class App {
 
 let app = new App('A', 'p', 'p');
 
-alert(app.getFullName());
+// alert(app.getFullName());

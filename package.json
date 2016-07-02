@@ -5,10 +5,11 @@
   "main": "home.js",
   "scripts": {
     "postinstall": "typings install",
+    "test-build:dev": "webpack --progress --display-error-details",
     "build:dev": "webpack --progress",
     "build:prod": "webpack -p --progress",
-    "serve:dev": "webpack --progress | webpack-dev-server  --content-base build/dev",
-    "serve:prod": "webpack -p --progress | webpack-dev-server  --content-base build/prod"
+    "serve:dev": "webpack-dev-server --inline --hot --progress",
+    "serve:prod": "webpack-dev-server --progress"
   },
   "keywords": [],
   "author": "",
