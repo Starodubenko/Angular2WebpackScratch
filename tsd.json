@@ -13,6 +13,36 @@
     },
     "requirejs/require.d.ts": {
       "commit": "993f83fe84ba1381d006772dc3343e1b8d5304f3"
+    },
+    "jasmine/jasmine.d.ts": {
+      "commit": "77b1b1709315b03b9b1b67c589d599bebeeef2ee"
+    },
+    "typescript/typescript.d.ts": {
+      "commit": "77b1b1709315b03b9b1b67c589d599bebeeef2ee"
+    },
+    "serve-static/serve-static.d.ts": {
+      "commit": "77b1b1709315b03b9b1b67c589d599bebeeef2ee"
+    },
+    "express/express.d.ts": {
+      "commit": "77b1b1709315b03b9b1b67c589d599bebeeef2ee"
+    },
+    "log4js/log4js.d.ts": {
+      "commit": "77b1b1709315b03b9b1b67c589d599bebeeef2ee"
+    },
+    "mime/mime.d.ts": {
+      "commit": "77b1b1709315b03b9b1b67c589d599bebeeef2ee"
+    },
+    "karma/karma.d.ts": {
+      "commit": "77b1b1709315b03b9b1b67c589d599bebeeef2ee"
+    },
+    "bluebird/bluebird.d.ts": {
+      "commit": "77b1b1709315b03b9b1b67c589d599bebeeef2ee"
+    },
+    "node/node.d.ts": {
+      "commit": "77b1b1709315b03b9b1b67c589d599bebeeef2ee"
+    },
+    "express-serve-static-core/express-serve-static-core.d.ts": {
+      "commit": "77b1b1709315b03b9b1b67c589d599bebeeef2ee"
     }
   }
 }
