@@ -8,6 +8,7 @@ const path = require('path');
 const rimraf = require('rimraf');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const ExtractTextPlugin = require('extract-text-webpack-plugin');
+const JasmineWebpackPlugin = require('jasmine-webpack-plugin');
 
 let mode = START_MODE.split(':')[1];
 let getBuildPath = function () {
@@ -67,6 +68,7 @@ module.exports = {
         }),
         new ExtractTextPlugin(addHash('[name].css', 'contenthash'), {allChunks: true, disable: mode == DEV_MODE}),
         new webpack.optimize.CommonsChunkPlugin({name: 'common'}),
+        new JasmineWebpackPlugin(),
     ],
 
     module: { // defining of modules
