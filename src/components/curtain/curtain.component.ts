@@ -1,17 +1,18 @@
-import './login.scss'
+import './curtain.scss'
 import {Component} from '@angular/core';
+import {ROUTER_DIRECTIVES} from "@angular/router";
 
 @Component({
-    selector: 'login',
-    template: `
-        <div class="admin-page">
-            <aside class="left-bar"></aside>
-            <div class="exhibition-wall"></div>
-            <aside class="right-bar"></aside>
-        </div>`,
-    directives: []
+    selector: 'curtain',
+    template: `<div class="curtain">
+                <h1>Curtain is here</h1>
+                <a [routerLink]="['./login']">Login</a>
+                <a [routerLink]="['./reminder']">Reminder</a>
+                <router-outlet></router-outlet>
+               </div>`,
+    directives: [ROUTER_DIRECTIVES]
 })
-export class Login {
+export class Curtain {
     fullName: string;
 
     getFullName(){

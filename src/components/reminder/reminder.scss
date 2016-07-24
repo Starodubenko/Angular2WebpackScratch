@@ -1,0 +1,23 @@
+.admin-page {
+    height: 80vh;
+    background-color: #97e986;
+    display: flex;
+    justify-content: space-between;
+    align-items: stretch;
+
+    .left-bar {
+        width: 200px;
+        background-color: #e7e968;
+    }
+
+    .right-bar {
+        width: 200px;
+        background-color: #c793e9;
+    }
+
+    .exhibition-wall {
+        background-color: #81e6e9;
+        flex: auto;
+        min-width: 600px;
+    }
+}

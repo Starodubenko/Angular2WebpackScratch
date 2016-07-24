@@ -1,11 +1,11 @@
-import { provideRouter, RouterConfig }  from '@angular/router';
-import {Login} from "./components/login/login.component";
+import { provideRouter, RouterConfig}  from '@angular/router';
 import {Home} from "./components/home/home.component";
+import {curtainRoutes} from "./components/curtain/curtain.router";
 
 
 const routes: RouterConfig = [
     {path: '', component: Home},
-    {path: 'login', component: Login}
+    ...curtainRoutes,
 ];
 
 export const APP_ROUTER_PROVIDERS = [

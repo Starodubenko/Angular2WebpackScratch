@@ -5,7 +5,7 @@ import {ROUTER_DIRECTIVES} from "@angular/router";
 @Component({
     selector: 'app',
     template: `<div><h1>This is Angular 2 Typescript Webpack App !!!</h1>
-                    <a [routerLink]="['/login']">Login</a>
+                    <a [routerLink]="['/curtain']">curtain</a>
                     <router-outlet></router-outlet>
                 </div>`,
     directives: [ROUTER_DIRECTIVES]
